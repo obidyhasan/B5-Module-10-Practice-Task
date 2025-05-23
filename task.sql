@@ -198,7 +198,8 @@ ON students(score);
 CREATE INDEX idx_course_enrollments_data
 ON course_enrollments (student_id, enrolled_on);
 
-EXPLAIN ANALYSE
 SELECT * FROM course_enrollments WHERE student_id = 3 AND enrolled_on = '2025-01-20';
 
 -- TASK 15. Compare query performance with and without indexes using EXPLAIN.
+EXPLAIN ANALYSE
+SELECT * FROM course_enrollments WHERE student_id = 3 AND enrolled_on = '2025-01-20';
